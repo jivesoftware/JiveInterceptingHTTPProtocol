@@ -1,5 +1,5 @@
 /*
- File: CacheStoragePolicy.m
+ File: JIHPCacheStoragePolicy.m
  Abstract: A function to determine the cache storage policy for a request.
  Version: 1.1
  
@@ -45,9 +45,9 @@
  
  */
 
-#import "CacheStoragePolicy.h"
+#import "JIHPCacheStoragePolicy.h"
 
-extern NSURLCacheStoragePolicy CacheStoragePolicyForRequestAndResponse(NSURLRequest * request, NSHTTPURLResponse * response)
+extern NSURLCacheStoragePolicy JIHPCacheStoragePolicyForRequestAndResponse(NSURLRequest * request, NSHTTPURLResponse * response)
 // See comment in header.
 {
     BOOL                        cacheable;

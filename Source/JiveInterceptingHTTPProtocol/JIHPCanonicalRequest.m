@@ -1,5 +1,5 @@
 /*
- File: CanonicalRequest.m
+ File: JIHPCanonicalRequest.m
  Abstract: A function for creating canonical HTTP/HTTPS requests.
  Version: 1.1
  
@@ -45,7 +45,7 @@
  
  */
 
-#import "CanonicalRequest.h"
+#import "JIHPCanonicalRequest.h"
 
 #include <xlocale.h>
 
@@ -343,7 +343,7 @@ static void CanonicaliseHeaders(NSMutableURLRequest * request)
 
 #pragma mark * API
 
-extern NSMutableURLRequest * CanonicalRequestForRequest(NSURLRequest *request)
+extern NSMutableURLRequest * JIHPCanonicalRequestForRequest(NSURLRequest *request)
 {
     NSMutableURLRequest *   result;
     NSString *              scheme;
@@ -410,7 +410,7 @@ extern NSMutableURLRequest * CanonicalRequestForRequest(NSURLRequest *request)
             // Note: The following logging is useful when debugging this code.  Change the
             // if expression to YES to enable it.
             
-            if (NO) {
+            if (/* DISABLES CODE */ (NO)) {
                 fprintf(stderr, "  [%zu] %.*s\n", stepIndex, (int) [urlData length], (const char *) [urlData bytes]);
             }
             

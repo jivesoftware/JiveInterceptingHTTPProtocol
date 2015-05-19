@@ -1,0 +1,1 @@
+../../../../Source/JiveInterceptingHTTPProtocol/JIHPCanonicalRequest.h
