@@ -1,0 +1,14 @@
+PODS:
+  - JiveInterceptingHTTPProtocol (0.1.0)
+
+DEPENDENCIES:
+  - JiveInterceptingHTTPProtocol (from `.`)
+
+EXTERNAL SOURCES:
+  JiveInterceptingHTTPProtocol:
+    :path: .
+
+SPEC CHECKSUMS:
+  JiveInterceptingHTTPProtocol: 2a7469f5a132bb60fd4184b2a8a21b62d834eca8
+
+COCOAPODS: 0.36.3
