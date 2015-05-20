@@ -7,293 +7,293 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0814B3B47E04AD7F26174581 /* JIHPCanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D3501538BE1E8EF7A5592173 /* JIHPCanonicalRequest.h */; };
-		289D6636E35F5F235C6C3538 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB0DF8852D76A2924A2E3A /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m */; };
-		30724E749CA53CA0CE732B13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AA193192AB75D6CECC6774 /* Foundation.framework */; };
-		3627AFB52B9E727BDAEC6670 /* JIHPInterceptingHTTPProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBC0F1FA84EF81BA5717F4A /* JIHPInterceptingHTTPProtocol.h */; };
-		37838C6DEC503298C36C5670 /* JIHPCacheStoragePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = E943B68F51D033FBFE427BD0 /* JIHPCacheStoragePolicy.h */; };
-		3F75E763901010572FC85106 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9160EC095BFDA7D53A5DD8F1 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m */; };
-		462AB64F17A6647D215D66CC /* JIHPQNSURLSessionDemux.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A8213C147266A4911E0549 /* JIHPQNSURLSessionDemux.h */; };
-		4CFC3BB3903C31AA3C4E0FAB /* JIHPInterceptingHTTPProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 1438AB1D605255532A8C7DFC /* JIHPInterceptingHTTPProtocol.m */; };
-		56A97035257723381F210951 /* JIHPCacheStoragePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6D17508709FE2BAA43226 /* JIHPCacheStoragePolicy.m */; };
-		58EC2E0D00770EB984024551 /* JIHPInterceptingHTTPProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBC0F1FA84EF81BA5717F4A /* JIHPInterceptingHTTPProtocol.h */; };
-		62FD5FBC80AFC012F22F1368 /* JIHPQNSURLSessionDemux.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A8213C147266A4911E0549 /* JIHPQNSURLSessionDemux.h */; };
-		84530A9FC7F28534F3C3D4B8 /* JIHPInterceptingHTTPProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 1438AB1D605255532A8C7DFC /* JIHPInterceptingHTTPProtocol.m */; };
-		88E27782BC609553CE233AF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AA193192AB75D6CECC6774 /* Foundation.framework */; };
-		930A7E484771402D51C48681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AA193192AB75D6CECC6774 /* Foundation.framework */; };
-		9A24ADBD555B9AE1694031F4 /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB35F95EAAD76B2B5706643D /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m */; };
-		9A775FE0008060FD1018DADE /* JIHPCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9FC87A5D9895005B9D26D0 /* JIHPCanonicalRequest.m */; };
-		A28CEAFD96D09FDC733231AE /* JIHPCacheStoragePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = E943B68F51D033FBFE427BD0 /* JIHPCacheStoragePolicy.h */; };
-		A4E4885CD9DCD1A3742E674D /* JIHPQNSURLSessionDemux.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1400EFC7AF5B683A25A233 /* JIHPQNSURLSessionDemux.m */; };
-		B4304A63281C8578AABC1082 /* JIHPQNSURLSessionDemux.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1400EFC7AF5B683A25A233 /* JIHPQNSURLSessionDemux.m */; };
-		B705561248907184AD5A5D66 /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0684F56CC91152AF9328D0 /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m */; };
-		B785E24741658E6AA343497B /* JIHPCanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D3501538BE1E8EF7A5592173 /* JIHPCanonicalRequest.h */; };
-		C892C331CA3046BA8170ACAE /* JIHPCacheStoragePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6D17508709FE2BAA43226 /* JIHPCacheStoragePolicy.m */; };
-		E219316981466C0F9F949330 /* JIHPCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9FC87A5D9895005B9D26D0 /* JIHPCanonicalRequest.m */; };
-		E25831C1E22A10EA2285EF93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AA193192AB75D6CECC6774 /* Foundation.framework */; };
+		0211E493EF9875C9237012CE /* JIHPCacheStoragePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = C850851404679AC845526C5A /* JIHPCacheStoragePolicy.h */; };
+		094044D77F553E6E51A9F816 /* JIHPCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DD8B24917D5CAC90492B7 /* JIHPCanonicalRequest.m */; };
+		09C2590A1A1D54A640B15D40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79292E95FA99EBD184349517 /* Foundation.framework */; };
+		0A4D86C9B7D14F67492E3F42 /* JIHPQNSURLSessionDemux.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A74D96AD407ED78A07D98 /* JIHPQNSURLSessionDemux.m */; };
+		2342B220124D647DB45356FA /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EAB5AC570A01ADE6B913EB /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m */; };
+		2D82BF60680D4B8BF1A8473C /* JIHPQNSURLSessionDemux.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A74D96AD407ED78A07D98 /* JIHPQNSURLSessionDemux.m */; };
+		480E2664D03486D03447C0FE /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DD2D4900A0AECB349BADEA /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m */; };
+		51FA94CD629B1580A91A05DA /* JIHPCanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D86161A7D3254A5147D0B117 /* JIHPCanonicalRequest.h */; };
+		589018B6B09B810CA1859D62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79292E95FA99EBD184349517 /* Foundation.framework */; };
+		6028620043CB9701BEB2A0F1 /* JIHPInterceptingHTTPProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 51381C701A91B68A41B7722C /* JIHPInterceptingHTTPProtocol.h */; };
+		63D88267137CBA296924989A /* JIHPInterceptingHTTPProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 51381C701A91B68A41B7722C /* JIHPInterceptingHTTPProtocol.h */; };
+		8088DE5C282D0483C6BD8DF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79292E95FA99EBD184349517 /* Foundation.framework */; };
+		96E8F02EA2FE434DEF4CD7FA /* JIHPInterceptingHTTPProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1463173337101EA1A5EDCF /* JIHPInterceptingHTTPProtocol.m */; };
+		AC41F7AF0935F0B0A9F10A6B /* JIHPCacheStoragePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D35A84EA45F071A477EA57B /* JIHPCacheStoragePolicy.m */; };
+		BB0181731A933D359B7F1194 /* JIHPQNSURLSessionDemux.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D730CDC78E7D2857EA9F97 /* JIHPQNSURLSessionDemux.h */; };
+		BBB224E4E25EBDEA85D4FB0E /* JIHPQNSURLSessionDemux.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D730CDC78E7D2857EA9F97 /* JIHPQNSURLSessionDemux.h */; };
+		C26190438A653654CAE2EFB6 /* JIHPCanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D86161A7D3254A5147D0B117 /* JIHPCanonicalRequest.h */; };
+		C9FC613D98996B473B934E66 /* JIHPCacheStoragePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = C850851404679AC845526C5A /* JIHPCacheStoragePolicy.h */; };
+		CEA474B3D5164160106070AC /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E998ED2E56B3813B6121893B /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m */; };
+		D00B3AD096EC00697E37E7DF /* JIHPInterceptingHTTPProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1463173337101EA1A5EDCF /* JIHPInterceptingHTTPProtocol.m */; };
+		D123BEC663C68D22737A5D6F /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA78E242B2968093444F9F97 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m */; };
+		E5B166F40A3DF1A4B034CBDD /* JIHPCacheStoragePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D35A84EA45F071A477EA57B /* JIHPCacheStoragePolicy.m */; };
+		EB0EC2BA1D5800E7A2A09A05 /* JIHPCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DD8B24917D5CAC90492B7 /* JIHPCanonicalRequest.m */; };
+		F15612CD90605DB358A42F8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79292E95FA99EBD184349517 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		87860A478380ADCEF50D2C35 /* PBXContainerItemProxy */ = {
+		79B534530734E800E72EBE7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 707613408120966A53C63B52 /* Project object */;
+			containerPortal = 25E580EAB9D35E615CB347D1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3931D1E43986B68775A7999B;
-			remoteInfo = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol";
-		};
-		F6BF969FC9E7C72D30A0498A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 707613408120966A53C63B52 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A2CF5C6A93166CCCC08D25A6;
+			remoteGlobalIDString = D79BDD1627CB64474123B7E5;
 			remoteInfo = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol";
+		};
+		A68DB95F114002534A1DC6E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E580EAB9D35E615CB347D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C1811E936BC618534C88C70;
+			remoteInfo = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05E6D17508709FE2BAA43226 /* JIHPCacheStoragePolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JIHPCacheStoragePolicy.m; sourceTree = "<group>"; };
-		0A9FB8E2675F99002560D15A /* Pods-JiveInterceptingHTTPProtocolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemo.release.xcconfig"; sourceTree = "<group>"; };
-		0E9FC87A5D9895005B9D26D0 /* JIHPCanonicalRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JIHPCanonicalRequest.m; sourceTree = "<group>"; };
-		0F1400EFC7AF5B683A25A233 /* JIHPQNSURLSessionDemux.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JIHPQNSURLSessionDemux.m; sourceTree = "<group>"; };
-		1438AB1D605255532A8C7DFC /* JIHPInterceptingHTTPProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JIHPInterceptingHTTPProtocol.m; sourceTree = "<group>"; };
-		16A9C0A3893C9AD8BCCD9754 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig"; sourceTree = "<group>"; };
-		1C2946EA3FB033AECCAEEFAA /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch"; path = "../Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch"; sourceTree = "<group>"; };
-		1D8690A4DFFC2DF891AF8EA6 /* Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		3647D55E3C650F1442145D70 /* Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		36D5B20FCBC8F8FC634BB974 /* libPods-JiveInterceptingHTTPProtocolDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiveInterceptingHTTPProtocolDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		386E7751AAADA2FF97C35673 /* Pods-JiveInterceptingHTTPProtocolDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		4EDA04EEBE9622AF306F5243 /* libPods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AFB0DF8852D76A2924A2E3A /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m"; path = "../Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m"; sourceTree = "<group>"; };
-		5F36B25F5863979DD7C1B060 /* Pods-JiveInterceptingHTTPProtocolDemoTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-environment.h"; sourceTree = "<group>"; };
-		5F6DAB3A71033B3251B477FD /* Pods-JiveInterceptingHTTPProtocolDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-resources.sh"; sourceTree = "<group>"; };
-		60A8213C147266A4911E0549 /* JIHPQNSURLSessionDemux.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JIHPQNSURLSessionDemux.h; sourceTree = "<group>"; };
-		646FB64D4BBA29089195A69A /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.xcconfig"; sourceTree = "<group>"; };
-		64800181D3CCD467F88FDA42 /* Pods-JiveInterceptingHTTPProtocolDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		648069A42287518C7146B11D /* Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6E1E7964DB383CA4B6C32872 /* libPods-JiveInterceptingHTTPProtocolDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiveInterceptingHTTPProtocolDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CBC0F1FA84EF81BA5717F4A /* JIHPInterceptingHTTPProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JIHPInterceptingHTTPProtocol.h; sourceTree = "<group>"; };
-		7D0684F56CC91152AF9328D0 /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JiveInterceptingHTTPProtocolDemo-dummy.m"; sourceTree = "<group>"; };
-		84035088C2069D721FE5673A /* Pods-JiveInterceptingHTTPProtocolDemo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JiveInterceptingHTTPProtocolDemo-environment.h"; sourceTree = "<group>"; };
-		9160EC095BFDA7D53A5DD8F1 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m"; sourceTree = "<group>"; };
-		9A8205E1A86B114F09BAD9EF /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3B75A8B959A56B956B8FA22 /* Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B1AA193192AB75D6CECC6774 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		BA5ADF93480274A06530859C /* libPods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C34BC54A45D8A7A71939DFB2 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig"; path = "../Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig"; sourceTree = "<group>"; };
-		D3501538BE1E8EF7A5592173 /* JIHPCanonicalRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JIHPCanonicalRequest.h; sourceTree = "<group>"; };
-		DC737CB259FED639EB68A524 /* Pods-JiveInterceptingHTTPProtocolDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JiveInterceptingHTTPProtocolDemo-resources.sh"; sourceTree = "<group>"; };
-		DF6D0767BCA329555E61E2B9 /* Pods-JiveInterceptingHTTPProtocolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		E64FB619A4967EBF36613042 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.xcconfig"; path = "../Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.xcconfig"; sourceTree = "<group>"; };
-		E6A1B9AFD5721656D5D25793 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch"; sourceTree = "<group>"; };
-		E943B68F51D033FBFE427BD0 /* JIHPCacheStoragePolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JIHPCacheStoragePolicy.h; sourceTree = "<group>"; };
-		EB35F95EAAD76B2B5706643D /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m"; sourceTree = "<group>"; };
+		074FC841D18EE0408B408029 /* libPods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B01DEF569CD809B97E5DF26 /* Pods-JiveInterceptingHTTPProtocolDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		0E9C2198F73B117DF0F25400 /* Pods-JiveInterceptingHTTPProtocolDemoTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-environment.h"; sourceTree = "<group>"; };
+		16638A90748E428CF0C51DF8 /* Pods-JiveInterceptingHTTPProtocolDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JiveInterceptingHTTPProtocolDemo-resources.sh"; sourceTree = "<group>"; };
+		1DAA62CC46BDE01F28777D79 /* Pods-JiveInterceptingHTTPProtocolDemo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JiveInterceptingHTTPProtocolDemo-environment.h"; sourceTree = "<group>"; };
+		2E60E200D788B00C503C859D /* Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		398CE4AB9276D8C87D2CB785 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch"; path = "../Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch"; sourceTree = "<group>"; };
+		42F58DCF93C9B46BDF24191B /* Pods-JiveInterceptingHTTPProtocolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemo.release.xcconfig"; sourceTree = "<group>"; };
+		51047FE3E38994B3DF538118 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig"; path = "../Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig"; sourceTree = "<group>"; };
+		51381C701A91B68A41B7722C /* JIHPInterceptingHTTPProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JIHPInterceptingHTTPProtocol.h; sourceTree = "<group>"; };
+		53C33930C12C1ED0881CAA90 /* Pods-JiveInterceptingHTTPProtocolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		65456B11DAC02CC59E68B034 /* libPods-JiveInterceptingHTTPProtocolDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiveInterceptingHTTPProtocolDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D35A84EA45F071A477EA57B /* JIHPCacheStoragePolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JIHPCacheStoragePolicy.m; sourceTree = "<group>"; };
+		79292E95FA99EBD184349517 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7EC8F8D1342684836DC1DB82 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch"; sourceTree = "<group>"; };
+		7FB0B2127AC2072C06362573 /* Pods-JiveInterceptingHTTPProtocolDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		840DD8B24917D5CAC90492B7 /* JIHPCanonicalRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JIHPCanonicalRequest.m; sourceTree = "<group>"; };
+		86DD2D4900A0AECB349BADEA /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JiveInterceptingHTTPProtocolDemo-dummy.m"; sourceTree = "<group>"; };
+		96EAB5AC570A01ADE6B913EB /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m"; path = "../Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m"; sourceTree = "<group>"; };
+		A7C30B3846E6AEDE90987D4A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AF75667103E814B187956FF0 /* Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B1149E984278961991202DF5 /* Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B17A74D96AD407ED78A07D98 /* JIHPQNSURLSessionDemux.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JIHPQNSURLSessionDemux.m; sourceTree = "<group>"; };
+		B21DE83C1BA2F55EFDD8AFE7 /* libPods-JiveInterceptingHTTPProtocolDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiveInterceptingHTTPProtocolDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC3D9F1E0E67E3EC6B0186B3 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig"; sourceTree = "<group>"; };
+		C3E1FEBF04558585ACBD667F /* Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		C850851404679AC845526C5A /* JIHPCacheStoragePolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JIHPCacheStoragePolicy.h; sourceTree = "<group>"; };
+		D86161A7D3254A5147D0B117 /* JIHPCanonicalRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JIHPCanonicalRequest.h; sourceTree = "<group>"; };
+		DA78E242B2968093444F9F97 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m"; sourceTree = "<group>"; };
+		E0ED716E62D3754B1612483D /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.xcconfig"; path = "../Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.xcconfig"; sourceTree = "<group>"; };
+		E34607147D60FAF63767C04B /* Pods-JiveInterceptingHTTPProtocolDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-resources.sh"; sourceTree = "<group>"; };
+		E4711B7EED9BD2A89B923656 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.xcconfig"; sourceTree = "<group>"; };
+		E5D730CDC78E7D2857EA9F97 /* JIHPQNSURLSessionDemux.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JIHPQNSURLSessionDemux.h; sourceTree = "<group>"; };
+		E998ED2E56B3813B6121893B /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m"; sourceTree = "<group>"; };
+		EC1463173337101EA1A5EDCF /* JIHPInterceptingHTTPProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JIHPInterceptingHTTPProtocol.m; sourceTree = "<group>"; };
+		F95CC5E8F25396FE7CDCE2C4 /* libPods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7EBB6AF3BFF238266272552B /* Frameworks */ = {
+		0F6C0E69F17A2743534CBE38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30724E749CA53CA0CE732B13 /* Foundation.framework in Frameworks */,
+				8088DE5C282D0483C6BD8DF8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B9FF2271A97ECE9D253E7ED /* Frameworks */ = {
+		0F885FBDDCA0BF4C5C02C719 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88E27782BC609553CE233AF2 /* Foundation.framework in Frameworks */,
+				F15612CD90605DB358A42F8C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		956289E455A1C51D02EC9833 /* Frameworks */ = {
+		6A71BFD17F61706019F0DC4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930A7E484771402D51C48681 /* Foundation.framework in Frameworks */,
+				09C2590A1A1D54A640B15D40 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2CDD5C1825A9C15A89EFC49 /* Frameworks */ = {
+		8BD522114CE3A94272824F2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25831C1E22A10EA2285EF93 /* Foundation.framework in Frameworks */,
+				589018B6B09B810CA1859D62 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2FDA76EC1594C2173F303549 /* JiveInterceptingHTTPProtocol */ = {
+		04E3F7D5E0252F4729472A5E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E943B68F51D033FBFE427BD0 /* JIHPCacheStoragePolicy.h */,
-				05E6D17508709FE2BAA43226 /* JIHPCacheStoragePolicy.m */,
-				D3501538BE1E8EF7A5592173 /* JIHPCanonicalRequest.h */,
-				0E9FC87A5D9895005B9D26D0 /* JIHPCanonicalRequest.m */,
-				7CBC0F1FA84EF81BA5717F4A /* JIHPInterceptingHTTPProtocol.h */,
-				1438AB1D605255532A8C7DFC /* JIHPInterceptingHTTPProtocol.m */,
-				60A8213C147266A4911E0549 /* JIHPQNSURLSessionDemux.h */,
-				0F1400EFC7AF5B683A25A233 /* JIHPQNSURLSessionDemux.m */,
+				285787DD131D8833E3153E9B /* Pods-JiveInterceptingHTTPProtocolDemo */,
+				69071BC8DD738379E61C1630 /* Pods-JiveInterceptingHTTPProtocolDemoTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		15EB6AF3A84BDF9BF7433F36 /* JiveInterceptingHTTPProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				C850851404679AC845526C5A /* JIHPCacheStoragePolicy.h */,
+				6D35A84EA45F071A477EA57B /* JIHPCacheStoragePolicy.m */,
+				D86161A7D3254A5147D0B117 /* JIHPCanonicalRequest.h */,
+				840DD8B24917D5CAC90492B7 /* JIHPCanonicalRequest.m */,
+				51381C701A91B68A41B7722C /* JIHPInterceptingHTTPProtocol.h */,
+				EC1463173337101EA1A5EDCF /* JIHPInterceptingHTTPProtocol.m */,
+				E5D730CDC78E7D2857EA9F97 /* JIHPQNSURLSessionDemux.h */,
+				B17A74D96AD407ED78A07D98 /* JIHPQNSURLSessionDemux.m */,
 			);
 			path = JiveInterceptingHTTPProtocol;
 			sourceTree = "<group>";
 		};
-		334A351945D490F2A879E55A /* Pods-JiveInterceptingHTTPProtocolDemo */ = {
+		285787DD131D8833E3153E9B /* Pods-JiveInterceptingHTTPProtocolDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3647D55E3C650F1442145D70 /* Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.markdown */,
-				1D8690A4DFFC2DF891AF8EA6 /* Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.plist */,
-				7D0684F56CC91152AF9328D0 /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m */,
-				84035088C2069D721FE5673A /* Pods-JiveInterceptingHTTPProtocolDemo-environment.h */,
-				DC737CB259FED639EB68A524 /* Pods-JiveInterceptingHTTPProtocolDemo-resources.sh */,
-				DF6D0767BCA329555E61E2B9 /* Pods-JiveInterceptingHTTPProtocolDemo.debug.xcconfig */,
-				0A9FB8E2675F99002560D15A /* Pods-JiveInterceptingHTTPProtocolDemo.release.xcconfig */,
+				B1149E984278961991202DF5 /* Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.markdown */,
+				C3E1FEBF04558585ACBD667F /* Pods-JiveInterceptingHTTPProtocolDemo-acknowledgements.plist */,
+				86DD2D4900A0AECB349BADEA /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m */,
+				1DAA62CC46BDE01F28777D79 /* Pods-JiveInterceptingHTTPProtocolDemo-environment.h */,
+				16638A90748E428CF0C51DF8 /* Pods-JiveInterceptingHTTPProtocolDemo-resources.sh */,
+				53C33930C12C1ED0881CAA90 /* Pods-JiveInterceptingHTTPProtocolDemo.debug.xcconfig */,
+				42F58DCF93C9B46BDF24191B /* Pods-JiveInterceptingHTTPProtocolDemo.release.xcconfig */,
 			);
 			name = "Pods-JiveInterceptingHTTPProtocolDemo";
 			path = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemo";
 			sourceTree = "<group>";
 		};
-		40ADAA057AC1DE9A4137705A /* Pods-JiveInterceptingHTTPProtocolDemoTests */ = {
+		3CCAD8078E4C441E66CD55A5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				648069A42287518C7146B11D /* Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.markdown */,
-				A3B75A8B959A56B956B8FA22 /* Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.plist */,
-				EB35F95EAAD76B2B5706643D /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m */,
-				5F36B25F5863979DD7C1B060 /* Pods-JiveInterceptingHTTPProtocolDemoTests-environment.h */,
-				5F6DAB3A71033B3251B477FD /* Pods-JiveInterceptingHTTPProtocolDemoTests-resources.sh */,
-				64800181D3CCD467F88FDA42 /* Pods-JiveInterceptingHTTPProtocolDemoTests.debug.xcconfig */,
-				386E7751AAADA2FF97C35673 /* Pods-JiveInterceptingHTTPProtocolDemoTests.release.xcconfig */,
+				15EB6AF3A84BDF9BF7433F36 /* JiveInterceptingHTTPProtocol */,
 			);
-			name = "Pods-JiveInterceptingHTTPProtocolDemoTests";
-			path = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemoTests";
+			path = Source;
 			sourceTree = "<group>";
 		};
-		712AA412DD33F87B04F6DD54 /* Development Pods */ = {
+		49B20F8D9C5E2EB6FE5BDDDB /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EF6F236E7DC303FC09996909 /* JiveInterceptingHTTPProtocol */,
+				6C17490216CA03F71D658401 /* JiveInterceptingHTTPProtocol */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		7A46DC2BFD83F9CCB7ADD91A /* iOS */ = {
+		624C1BE1B3CF75304C52AE22 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1AA193192AB75D6CECC6774 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		7EBCBE06F935326701961CC4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				646FB64D4BBA29089195A69A /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.xcconfig */,
-				16A9C0A3893C9AD8BCCD9754 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig */,
-				9160EC095BFDA7D53A5DD8F1 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m */,
-				E6A1B9AFD5721656D5D25793 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch */,
-				E64FB619A4967EBF36613042 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.xcconfig */,
-				C34BC54A45D8A7A71939DFB2 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig */,
-				5AFB0DF8852D76A2924A2E3A /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m */,
-				1C2946EA3FB033AECCAEEFAA /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch */,
+				E4711B7EED9BD2A89B923656 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.xcconfig */,
+				BC3D9F1E0E67E3EC6B0186B3 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig */,
+				DA78E242B2968093444F9F97 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m */,
+				7EC8F8D1342684836DC1DB82 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch */,
+				E0ED716E62D3754B1612483D /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.xcconfig */,
+				51047FE3E38994B3DF538118 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig */,
+				96EAB5AC570A01ADE6B913EB /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m */,
+				398CE4AB9276D8C87D2CB785 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "Pods/Target Support Files/Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol";
 			sourceTree = "<group>";
 		};
-		8E192E1F0C11885E72272705 /* Source */ = {
+		63884B996C9840F24001B516 = {
 			isa = PBXGroup;
 			children = (
-				2FDA76EC1594C2173F303549 /* JiveInterceptingHTTPProtocol */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		B75313C455F8B3911DFBA47C = {
-			isa = PBXGroup;
-			children = (
-				9A8205E1A86B114F09BAD9EF /* Podfile */,
-				712AA412DD33F87B04F6DD54 /* Development Pods */,
-				CD16A837660F4B2355A1D02C /* Frameworks */,
-				DBA39052356AB35FB46552F4 /* Products */,
-				CEA1DFD1AA2C3ACA0029AAB8 /* Targets Support Files */,
+				A7C30B3846E6AEDE90987D4A /* Podfile */,
+				49B20F8D9C5E2EB6FE5BDDDB /* Development Pods */,
+				8D2BD3AE48BE04DB721B0F2E /* Frameworks */,
+				6D2423310A0426318015BCD6 /* Products */,
+				04E3F7D5E0252F4729472A5E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		CD16A837660F4B2355A1D02C /* Frameworks */ = {
+		69071BC8DD738379E61C1630 /* Pods-JiveInterceptingHTTPProtocolDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A46DC2BFD83F9CCB7ADD91A /* iOS */,
+				2E60E200D788B00C503C859D /* Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.markdown */,
+				AF75667103E814B187956FF0 /* Pods-JiveInterceptingHTTPProtocolDemoTests-acknowledgements.plist */,
+				E998ED2E56B3813B6121893B /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m */,
+				0E9C2198F73B117DF0F25400 /* Pods-JiveInterceptingHTTPProtocolDemoTests-environment.h */,
+				E34607147D60FAF63767C04B /* Pods-JiveInterceptingHTTPProtocolDemoTests-resources.sh */,
+				7FB0B2127AC2072C06362573 /* Pods-JiveInterceptingHTTPProtocolDemoTests.debug.xcconfig */,
+				0B01DEF569CD809B97E5DF26 /* Pods-JiveInterceptingHTTPProtocolDemoTests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-JiveInterceptingHTTPProtocolDemoTests";
+			path = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemoTests";
 			sourceTree = "<group>";
 		};
-		CEA1DFD1AA2C3ACA0029AAB8 /* Targets Support Files */ = {
+		6C17490216CA03F71D658401 /* JiveInterceptingHTTPProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				334A351945D490F2A879E55A /* Pods-JiveInterceptingHTTPProtocolDemo */,
-				40ADAA057AC1DE9A4137705A /* Pods-JiveInterceptingHTTPProtocolDemoTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		DBA39052356AB35FB46552F4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6E1E7964DB383CA4B6C32872 /* libPods-JiveInterceptingHTTPProtocolDemo.a */,
-				4EDA04EEBE9622AF306F5243 /* libPods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.a */,
-				36D5B20FCBC8F8FC634BB974 /* libPods-JiveInterceptingHTTPProtocolDemoTests.a */,
-				BA5ADF93480274A06530859C /* libPods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EF6F236E7DC303FC09996909 /* JiveInterceptingHTTPProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				8E192E1F0C11885E72272705 /* Source */,
-				7EBCBE06F935326701961CC4 /* Support Files */,
+				3CCAD8078E4C441E66CD55A5 /* Source */,
+				624C1BE1B3CF75304C52AE22 /* Support Files */,
 			);
 			name = JiveInterceptingHTTPProtocol;
 			path = ..;
 			sourceTree = "<group>";
 		};
+		6D2423310A0426318015BCD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65456B11DAC02CC59E68B034 /* libPods-JiveInterceptingHTTPProtocolDemo.a */,
+				074FC841D18EE0408B408029 /* libPods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.a */,
+				B21DE83C1BA2F55EFDD8AFE7 /* libPods-JiveInterceptingHTTPProtocolDemoTests.a */,
+				F95CC5E8F25396FE7CDCE2C4 /* libPods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D2BD3AE48BE04DB721B0F2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D41627DD0CE089C0BDD7A656 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D41627DD0CE089C0BDD7A656 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				79292E95FA99EBD184349517 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		881B42394A88F0D7771EEB89 /* Headers */ = {
+		7908E07D18218EA248EFB767 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A28CEAFD96D09FDC733231AE /* JIHPCacheStoragePolicy.h in Headers */,
-				0814B3B47E04AD7F26174581 /* JIHPCanonicalRequest.h in Headers */,
-				3627AFB52B9E727BDAEC6670 /* JIHPInterceptingHTTPProtocol.h in Headers */,
-				62FD5FBC80AFC012F22F1368 /* JIHPQNSURLSessionDemux.h in Headers */,
+				C9FC613D98996B473B934E66 /* JIHPCacheStoragePolicy.h in Headers */,
+				C26190438A653654CAE2EFB6 /* JIHPCanonicalRequest.h in Headers */,
+				6028620043CB9701BEB2A0F1 /* JIHPInterceptingHTTPProtocol.h in Headers */,
+				BB0181731A933D359B7F1194 /* JIHPQNSURLSessionDemux.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF2E4E5C35ADC2E4BB115BA1 /* Headers */ = {
+		856F59308773C41CDC3F745F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37838C6DEC503298C36C5670 /* JIHPCacheStoragePolicy.h in Headers */,
-				B785E24741658E6AA343497B /* JIHPCanonicalRequest.h in Headers */,
-				58EC2E0D00770EB984024551 /* JIHPInterceptingHTTPProtocol.h in Headers */,
-				462AB64F17A6647D215D66CC /* JIHPQNSURLSessionDemux.h in Headers */,
+				0211E493EF9875C9237012CE /* JIHPCacheStoragePolicy.h in Headers */,
+				51FA94CD629B1580A91A05DA /* JIHPCanonicalRequest.h in Headers */,
+				63D88267137CBA296924989A /* JIHPInterceptingHTTPProtocol.h in Headers */,
+				BBB224E4E25EBDEA85D4FB0E /* JIHPQNSURLSessionDemux.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3931D1E43986B68775A7999B /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol */ = {
+		3C1811E936BC618534C88C70 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD3C38BB0B24573C21AE7A74 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol" */;
+			buildConfigurationList = 49998CF61A59130101D1E490 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol" */;
 			buildPhases = (
-				DB39F9E0F6497C6C66227E9C /* Sources */,
-				7EBB6AF3BFF238266272552B /* Frameworks */,
-				DF2E4E5C35ADC2E4BB115BA1 /* Headers */,
+				A4ED5F77CED5FA0B5B5D414C /* Sources */,
+				8BD522114CE3A94272824F2F /* Frameworks */,
+				7908E07D18218EA248EFB767 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -301,16 +301,50 @@
 			);
 			name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol";
 			productName = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol";
-			productReference = BA5ADF93480274A06530859C /* libPods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.a */;
+			productReference = F95CC5E8F25396FE7CDCE2C4 /* libPods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		A2CF5C6A93166CCCC08D25A6 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol */ = {
+		5FB5FC1648C11CC088CA8C64 /* Pods-JiveInterceptingHTTPProtocolDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24A77B8D4C78D0390376F703 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol" */;
+			buildConfigurationList = A39E1F32BD923E501F0FBD20 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemoTests" */;
 			buildPhases = (
-				0BEAA0AC8C4B4F0D3713DFFC /* Sources */,
-				A2CDD5C1825A9C15A89EFC49 /* Frameworks */,
-				881B42394A88F0D7771EEB89 /* Headers */,
+				3F42BC1FCF9AACF0E07A7FC9 /* Sources */,
+				0F885FBDDCA0BF4C5C02C719 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4416A26EF1AA4F2CC0FC060E /* PBXTargetDependency */,
+			);
+			name = "Pods-JiveInterceptingHTTPProtocolDemoTests";
+			productName = "Pods-JiveInterceptingHTTPProtocolDemoTests";
+			productReference = B21DE83C1BA2F55EFDD8AFE7 /* libPods-JiveInterceptingHTTPProtocolDemoTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BEB1C71C10649294C117732E /* Pods-JiveInterceptingHTTPProtocolDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA0FA287ACAFECC7B684918 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemo" */;
+			buildPhases = (
+				651DC48836F5F7CD9BF95DD4 /* Sources */,
+				0F6C0E69F17A2743534CBE38 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A42BD7ABDC90387D5D71585 /* PBXTargetDependency */,
+			);
+			name = "Pods-JiveInterceptingHTTPProtocolDemo";
+			productName = "Pods-JiveInterceptingHTTPProtocolDemo";
+			productReference = 65456B11DAC02CC59E68B034 /* libPods-JiveInterceptingHTTPProtocolDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D79BDD1627CB64474123B7E5 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66AE479DA564AC14F50200DF /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol" */;
+			buildPhases = (
+				4EE531AAF4C8F567434E4E89 /* Sources */,
+				6A71BFD17F61706019F0DC4C /* Frameworks */,
+				856F59308773C41CDC3F745F /* Headers */,
 			);
 			buildRules = (
 			);
@@ -318,197 +352,99 @@
 			);
 			name = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol";
 			productName = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol";
-			productReference = 4EDA04EEBE9622AF306F5243 /* libPods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		B81AFD03D874B4E5BBECC11D /* Pods-JiveInterceptingHTTPProtocolDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6D3B9F3FD1932EAB354F4AFC /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemoTests" */;
-			buildPhases = (
-				E72E66A0A7CA6A0079BFB5DC /* Sources */,
-				956289E455A1C51D02EC9833 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2806BCFE58CE7031F29209C4 /* PBXTargetDependency */,
-			);
-			name = "Pods-JiveInterceptingHTTPProtocolDemoTests";
-			productName = "Pods-JiveInterceptingHTTPProtocolDemoTests";
-			productReference = 36D5B20FCBC8F8FC634BB974 /* libPods-JiveInterceptingHTTPProtocolDemoTests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		B9552910D93B5AF25D9C6CEF /* Pods-JiveInterceptingHTTPProtocolDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F76A64B99144B70CF8E11AC9 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemo" */;
-			buildPhases = (
-				CA39176278716E363010B1F4 /* Sources */,
-				8B9FF2271A97ECE9D253E7ED /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1A247E99AAF06DF5BCDAE08 /* PBXTargetDependency */,
-			);
-			name = "Pods-JiveInterceptingHTTPProtocolDemo";
-			productName = "Pods-JiveInterceptingHTTPProtocolDemo";
-			productReference = 6E1E7964DB383CA4B6C32872 /* libPods-JiveInterceptingHTTPProtocolDemo.a */;
+			productReference = 074FC841D18EE0408B408029 /* libPods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		707613408120966A53C63B52 /* Project object */ = {
+		25E580EAB9D35E615CB347D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 59ED8FAC6B395EFACE3C513D /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = FCDC2DE40807D56038572708 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = B75313C455F8B3911DFBA47C;
-			productRefGroup = DBA39052356AB35FB46552F4 /* Products */;
+			mainGroup = 63884B996C9840F24001B516;
+			productRefGroup = 6D2423310A0426318015BCD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9552910D93B5AF25D9C6CEF /* Pods-JiveInterceptingHTTPProtocolDemo */,
-				A2CF5C6A93166CCCC08D25A6 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol */,
-				B81AFD03D874B4E5BBECC11D /* Pods-JiveInterceptingHTTPProtocolDemoTests */,
-				3931D1E43986B68775A7999B /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol */,
+				BEB1C71C10649294C117732E /* Pods-JiveInterceptingHTTPProtocolDemo */,
+				D79BDD1627CB64474123B7E5 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol */,
+				5FB5FC1648C11CC088CA8C64 /* Pods-JiveInterceptingHTTPProtocolDemoTests */,
+				3C1811E936BC618534C88C70 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0BEAA0AC8C4B4F0D3713DFFC /* Sources */ = {
+		3F42BC1FCF9AACF0E07A7FC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56A97035257723381F210951 /* JIHPCacheStoragePolicy.m in Sources */,
-				9A775FE0008060FD1018DADE /* JIHPCanonicalRequest.m in Sources */,
-				84530A9FC7F28534F3C3D4B8 /* JIHPInterceptingHTTPProtocol.m in Sources */,
-				A4E4885CD9DCD1A3742E674D /* JIHPQNSURLSessionDemux.m in Sources */,
-				3F75E763901010572FC85106 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m in Sources */,
+				CEA474B3D5164160106070AC /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA39176278716E363010B1F4 /* Sources */ = {
+		4EE531AAF4C8F567434E4E89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B705561248907184AD5A5D66 /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m in Sources */,
+				E5B166F40A3DF1A4B034CBDD /* JIHPCacheStoragePolicy.m in Sources */,
+				EB0EC2BA1D5800E7A2A09A05 /* JIHPCanonicalRequest.m in Sources */,
+				96E8F02EA2FE434DEF4CD7FA /* JIHPInterceptingHTTPProtocol.m in Sources */,
+				2D82BF60680D4B8BF1A8473C /* JIHPQNSURLSessionDemux.m in Sources */,
+				D123BEC663C68D22737A5D6F /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB39F9E0F6497C6C66227E9C /* Sources */ = {
+		651DC48836F5F7CD9BF95DD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C892C331CA3046BA8170ACAE /* JIHPCacheStoragePolicy.m in Sources */,
-				E219316981466C0F9F949330 /* JIHPCanonicalRequest.m in Sources */,
-				4CFC3BB3903C31AA3C4E0FAB /* JIHPInterceptingHTTPProtocol.m in Sources */,
-				B4304A63281C8578AABC1082 /* JIHPQNSURLSessionDemux.m in Sources */,
-				289D6636E35F5F235C6C3538 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m in Sources */,
+				480E2664D03486D03447C0FE /* Pods-JiveInterceptingHTTPProtocolDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E72E66A0A7CA6A0079BFB5DC /* Sources */ = {
+		A4ED5F77CED5FA0B5B5D414C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A24ADBD555B9AE1694031F4 /* Pods-JiveInterceptingHTTPProtocolDemoTests-dummy.m in Sources */,
+				AC41F7AF0935F0B0A9F10A6B /* JIHPCacheStoragePolicy.m in Sources */,
+				094044D77F553E6E51A9F816 /* JIHPCanonicalRequest.m in Sources */,
+				D00B3AD096EC00697E37E7DF /* JIHPInterceptingHTTPProtocol.m in Sources */,
+				0A4D86C9B7D14F67492E3F42 /* JIHPQNSURLSessionDemux.m in Sources */,
+				2342B220124D647DB45356FA /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2806BCFE58CE7031F29209C4 /* PBXTargetDependency */ = {
+		4416A26EF1AA4F2CC0FC060E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol";
-			target = 3931D1E43986B68775A7999B /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol */;
-			targetProxy = 87860A478380ADCEF50D2C35 /* PBXContainerItemProxy */;
+			target = 3C1811E936BC618534C88C70 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol */;
+			targetProxy = A68DB95F114002534A1DC6E2 /* PBXContainerItemProxy */;
 		};
-		C1A247E99AAF06DF5BCDAE08 /* PBXTargetDependency */ = {
+		4A42BD7ABDC90387D5D71585 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol";
-			target = A2CF5C6A93166CCCC08D25A6 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol */;
-			targetProxy = F6BF969FC9E7C72D30A0498A /* PBXContainerItemProxy */;
+			target = D79BDD1627CB64474123B7E5 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol */;
+			targetProxy = 79B534530734E800E72EBE7E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0B1962249E856B88030F1253 /* Debug */ = {
+		52909E60FFDD83A91E89804E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64800181D3CCD467F88FDA42 /* Pods-JiveInterceptingHTTPProtocolDemoTests.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		121A892915932C19A070782C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF6D0767BCA329555E61E2B9 /* Pods-JiveInterceptingHTTPProtocolDemo.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		44427CD75C7ADDA0351EC4AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 386E7751AAADA2FF97C35673 /* Pods-JiveInterceptingHTTPProtocolDemoTests.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		764BFD4E3FFEFF9FC2557EA3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16A9C0A3893C9AD8BCCD9754 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		772395ECD6A9A3C6DC00EF7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16A9C0A3893C9AD8BCCD9754 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig */;
+			baseConfigurationReference = BC3D9F1E0E67E3EC6B0186B3 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch";
@@ -522,7 +458,119 @@
 			};
 			name = Release;
 		};
-		7C559684C57EEB2478102DDC /* Debug */ = {
+		56A2AAE2903199E7C8A22B94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51047FE3E38994B3DF538118 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5C9B0652C676609780E67DD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51047FE3E38994B3DF538118 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		727E64860CC2BF49E38E7B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC3D9F1E0E67E3EC6B0186B3 /* Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		74138A778C61B603FE46F179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB0B2127AC2072C06362573 /* Pods-JiveInterceptingHTTPProtocolDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B03B866E50643C03DB3DC36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53C33930C12C1ED0881CAA90 /* Pods-JiveInterceptingHTTPProtocolDemo.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B6B168C3BEA51DF3BEDF6511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B01DEF569CD809B97E5DF26 /* Pods-JiveInterceptingHTTPProtocolDemoTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CE3F69125A3AC5FFAFE62EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42F58DCF93C9B46BDF24191B /* Pods-JiveInterceptingHTTPProtocolDemo.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D5D647F8760831E6A22EC1CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -561,7 +609,7 @@
 			};
 			name = Debug;
 		};
-		840B68DF58CCD92743B8FE99 /* Release */ = {
+		EAAFAF6D471984A477DCB1AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -595,103 +643,55 @@
 			};
 			name = Release;
 		};
-		964488BBFDD53E75749FDBC7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C34BC54A45D8A7A71939DFB2 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		BB0FF54E00CA9A6580FD9515 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C34BC54A45D8A7A71939DFB2 /* Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol/Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D5F8E71F92EB4A720796B901 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A9FB8E2675F99002560D15A /* Pods-JiveInterceptingHTTPProtocolDemo.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24A77B8D4C78D0390376F703 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol" */ = {
+		49998CF61A59130101D1E490 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				764BFD4E3FFEFF9FC2557EA3 /* Debug */,
-				772395ECD6A9A3C6DC00EF7A /* Release */,
+				56A2AAE2903199E7C8A22B94 /* Debug */,
+				5C9B0652C676609780E67DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59ED8FAC6B395EFACE3C513D /* Build configuration list for PBXProject "Pods" */ = {
+		66AE479DA564AC14F50200DF /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemo-JiveInterceptingHTTPProtocol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C559684C57EEB2478102DDC /* Debug */,
-				840B68DF58CCD92743B8FE99 /* Release */,
+				727E64860CC2BF49E38E7B66 /* Debug */,
+				52909E60FFDD83A91E89804E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6D3B9F3FD1932EAB354F4AFC /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemoTests" */ = {
+		A39E1F32BD923E501F0FBD20 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B1962249E856B88030F1253 /* Debug */,
-				44427CD75C7ADDA0351EC4AE /* Release */,
+				74138A778C61B603FE46F179 /* Debug */,
+				B6B168C3BEA51DF3BEDF6511 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F76A64B99144B70CF8E11AC9 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemo" */ = {
+		DEA0FA287ACAFECC7B684918 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				121A892915932C19A070782C /* Debug */,
-				D5F8E71F92EB4A720796B901 /* Release */,
+				B03B866E50643C03DB3DC36D /* Debug */,
+				CE3F69125A3AC5FFAFE62EA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD3C38BB0B24573C21AE7A74 /* Build configuration list for PBXNativeTarget "Pods-JiveInterceptingHTTPProtocolDemoTests-JiveInterceptingHTTPProtocol" */ = {
+		FCDC2DE40807D56038572708 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB0FF54E00CA9A6580FD9515 /* Debug */,
-				964488BBFDD53E75749FDBC7 /* Release */,
+				D5D647F8760831E6A22EC1CC /* Debug */,
+				EAAFAF6D471984A477DCB1AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 707613408120966A53C63B52 /* Project object */;
+	rootObject = 25E580EAB9D35E615CB347D1 /* Project object */;
 }

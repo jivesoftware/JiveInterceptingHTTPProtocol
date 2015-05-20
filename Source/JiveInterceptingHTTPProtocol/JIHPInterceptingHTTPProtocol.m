@@ -56,6 +56,12 @@
 
 typedef void (^ChallengeCompletionHandler)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * credential);
 
+@interface JIHPWeakDelegateHolder : NSObject
+
+@property (nonatomic, weak) id<JIHPInterceptingHTTPProtocolDelegate> delegate;
+
+@end
+
 @interface JIHPInterceptingHTTPProtocol () <NSURLSessionDataDelegate>
 
 @property (atomic, strong, readwrite) NSThread *                        clientThread;       ///< The thread on which we should call the client.
@@ -72,8 +78,6 @@ typedef void (^ChallengeCompletionHandler)(NSURLSessionAuthChallengeDisposition 
 @property (atomic, copy,   readwrite) NSArray *                         modes;
 @property (atomic, assign, readwrite) NSTimeInterval                    startTime;          ///< The start time of the request; written by client thread only; read by any thread.
 @property (atomic, strong, readwrite) NSURLSessionDataTask *            task;               ///< The NSURLSession task for that request; client thread only.
-@property (atomic, strong, readwrite) NSURLAuthenticationChallenge *    pendingChallenge;
-@property (atomic, copy,   readwrite) ChallengeCompletionHandler        pendingChallengeCompletionHandler;  ///< The completion handler that matches pendingChallenge; main thread only.
 
 @end
 
@@ -84,11 +88,17 @@ typedef void (^ChallengeCompletionHandler)(NSURLSessionAuthChallengeDisposition 
 /*! The backing store for the class delegate.  This is protected by @synchronized on the class.
  */
 
-static id<JIHPInterceptingHTTPProtocolDelegate> sDelegate;
+
+static JIHPWeakDelegateHolder* weakDelegateHolder;
 
 + (void)start
 {
     [NSURLProtocol registerClass:self];
+}
+
++ (void)stop
+{
+    [NSURLProtocol unregisterClass:self];
 }
 
 + (id<JIHPInterceptingHTTPProtocolDelegate>)delegate
@@ -96,7 +106,10 @@ static id<JIHPInterceptingHTTPProtocolDelegate> sDelegate;
     id<JIHPInterceptingHTTPProtocolDelegate> result;
     
     @synchronized (self) {
-        result = sDelegate;
+        if (!weakDelegateHolder) {
+            weakDelegateHolder = [JIHPWeakDelegateHolder new];
+        }
+        result = weakDelegateHolder.delegate;
     }
     return result;
 }
@@ -104,7 +117,10 @@ static id<JIHPInterceptingHTTPProtocolDelegate> sDelegate;
 + (void)setDelegate:(id<JIHPInterceptingHTTPProtocolDelegate>)newValue
 {
     @synchronized (self) {
-        sDelegate = newValue;
+        if (!weakDelegateHolder) {
+            weakDelegateHolder = [JIHPWeakDelegateHolder new];
+        }
+        weakDelegateHolder.delegate = newValue;
     }
 }
 
@@ -154,6 +170,15 @@ static id<JIHPInterceptingHTTPProtocolDelegate> sDelegate;
         va_start(arguments, format);
         [strongDelegate interceptingHTTPProtocol:protocol logWithFormat:format arguments:arguments];
         va_end(arguments);
+    }
+    
+    if ([strongDelegate respondsToSelector:@selector(interceptingHTTPProtocol:logMessage:)]) {
+        va_list arguments;
+        
+        va_start(arguments, format);
+        NSString *message = [[NSString alloc] initWithFormat:format arguments:arguments];
+        va_end(arguments);
+        [strongDelegate interceptingHTTPProtocol:protocol logMessage:message];
     }
 }
 
@@ -221,6 +246,27 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
         }
     }
     
+    if (shouldAccept) {
+        id<JIHPInterceptingHTTPProtocolDelegate> strongDelegate = self.delegate;
+        if ([strongDelegate respondsToSelector:@selector(canInterceptRequest:)]) {
+            shouldAccept = [strongDelegate canInterceptRequest:request];
+            if (shouldAccept) {
+                [self interceptingHTTPProtocol:nil logWithFormat:@"delegate wants to intercept request %@", request];
+            } else {
+                [self interceptingHTTPProtocol:nil logWithFormat:@"delegate does not want to intercept request %@", request];
+            }
+        } else if ([strongDelegate respondsToSelector:@selector(canInterceptURL:)]) {
+            shouldAccept = [strongDelegate canInterceptURL:url];
+            if (shouldAccept) {
+                [self interceptingHTTPProtocol:nil logWithFormat:@"delegate wants to intercept URL %@", url];
+            } else {
+                [self interceptingHTTPProtocol:nil logWithFormat:@"delegate does not want to intercept URL %@", url];
+            }
+        } else {
+            [self interceptingHTTPProtocol:nil logWithFormat:@"delegate does not implement interception callbacks"];
+        }
+    }
+    
     return shouldAccept;
 }
 
@@ -261,8 +307,6 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
     // can be called on any thread
     [[self class] interceptingHTTPProtocol:self logWithFormat:@"dealloc"];
     assert(self->_task == nil);                     // we should have cleared it by now
-    assert(self->_pendingChallenge == nil);         // we should have cancelled it by now
-    assert(self->_pendingChallengeCompletionHandler == nil);    // we should have cancelled it by now
 }
 
 - (void)startLoading
@@ -299,7 +343,13 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
     // Create new request that's a clone of the request we were initialised with,
     // except that it has our 'recursive request flag' property set on it.
     
-    recursiveRequest = [[self request] mutableCopy];
+    id<JIHPInterceptingHTTPProtocolDelegate> strongDelegate = [[self class] delegate];
+    if ([strongDelegate respondsToSelector:@selector(interceptingHTTPProtocol:interceptRequest:)]) {
+        recursiveRequest = [strongDelegate interceptingHTTPProtocol:self interceptRequest:[self request]];
+    } else {
+        [[self class] interceptingHTTPProtocol:self logWithFormat:@"delegate: %@ doesn't respond to selector: %@", strongDelegate, NSStringFromSelector(@selector(interceptingHTTPProtocol:interceptRequest:))];
+        recursiveRequest = [[self request] mutableCopy];
+    }
     assert(recursiveRequest != nil);
     
     [[self class] setProperty:@YES forKey:kOurRecursiveRequestFlagProperty inRequest:recursiveRequest];
@@ -343,7 +393,6 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
     
     assert([NSThread currentThread] == self.clientThread);
     
-    [self cancelPendingChallenge];
     if (self.task != nil) {
         [self.task cancel];
         self.task = nil;
@@ -351,231 +400,6 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
         // which specificallys traps and ignores the error.
     }
     // Don't nil out self.modes; see property declaration comments for a a discussion of this.
-}
-
-#pragma mark * Authentication challenge handling
-
-/*! Performs the block on the specified thread in one of specified modes.
- *  \param thread The thread to target; nil implies the main thread.
- *  \param modes The modes to target; nil or an empty array gets you the default run loop mode.
- *  \param block The block to run.
- */
-
-- (void)performOnThread:(NSThread *)thread modes:(NSArray *)modes block:(dispatch_block_t)block
-{
-    // thread may be nil
-    // modes may be nil
-    assert(block != nil);
-    
-    if (thread == nil) {
-        thread = [NSThread mainThread];
-    }
-    if ([modes count] == 0) {
-        modes = @[ NSDefaultRunLoopMode ];
-    }
-    [self performSelector:@selector(onThreadPerformBlock:) onThread:thread withObject:[block copy] waitUntilDone:NO modes:modes];
-}
-
-/*! A helper method used by -performOnThread:modes:block:. Runs in the specified context
- *  and simply calls the block.
- *  \param block The block to run.
- */
-
-- (void)onThreadPerformBlock:(dispatch_block_t)block
-{
-    assert(block != nil);
-    block();
-}
-
-/*! Called by our NSURLSession delegate callback to pass the challenge to our delegate.
- *  \description This simply passes the challenge over to the main thread.
- *  We do this so that all accesses to pendingChallenge are done from the main thread,
- *  which avoids the need for extra synchronisation.
- *
- *  By the time this runes, the NSURLSession delegate callback has already confirmed with
- *  the delegate that it wants the challenge.
- *
- *  Note that we use the default run loop mode here, not the common modes.  We don't want
- *  an authorisation dialog showing up on top of an active menu (-:
- *
- *  Also, we implement our own 'perform block' infrastructure because Cocoa doesn't have
- *  one <rdar://problem/17232344> and CFRunLoopPerformBlock is inadequate for the
- *  return case (where we need to pass in an array of modes; CFRunLoopPerformBlock only takes
- *  one mode).
- *  \param challenge The authentication challenge to process; must not be nil.
- *  \param completionHandler The associated completion handler; must not be nil.
- */
-
-- (void)didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(ChallengeCompletionHandler)completionHandler
-{
-    assert(challenge != nil);
-    assert(completionHandler != nil);
-    assert([NSThread currentThread] == self.clientThread);
-    
-    [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge %@ received", [[challenge protectionSpace] authenticationMethod]];
-    
-    [self performOnThread:nil modes:nil block:^{
-        [self mainThreadDidReceiveAuthenticationChallenge:challenge completionHandler:completionHandler];
-    }];
-}
-
-/*! The main thread side of authentication challenge processing.
- *  \details If there's already a pending challenge, something has gone wrong and
- *  the routine simply cancels the new challenge.  If our delegate doesn't implement
- *  the -interceptingHTTPProtocol:canAuthenticateAgainstProtectionSpace: delegate callback,
- *  we also cancel the challenge.  OTOH, if all goes well we simply call our delegate
- *  with the challenge.
- *  \param challenge The authentication challenge to process; must not be nil.
- *  \param completionHandler The associated completion handler; must not be nil.
- */
-
-- (void)mainThreadDidReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(ChallengeCompletionHandler)completionHandler
-{
-    assert(challenge != nil);
-    assert(completionHandler != nil);
-    assert([NSThread isMainThread]);
-    
-    if (self.pendingChallenge != nil) {
-        
-        // Our delegate is not expecting a second authentication challenge before resolving the
-        // first.  Likewise, NSURLSession shouldn't send us a second authentication challenge
-        // before we resolve the first.  If this happens, assert, log, and cancel the challenge.
-        //
-        // Note that we have to cancel the challenge on the thread on which we received it,
-        // namely, the client thread.
-        
-        [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge %@ cancelled; other challenge pending", [[challenge protectionSpace] authenticationMethod]];
-        assert(NO);
-        [self clientThreadCancelAuthenticationChallenge:challenge completionHandler:completionHandler];
-    } else {
-        id<JIHPInterceptingHTTPProtocolDelegate>  strongDelegate;
-        
-        strongDelegate = [[self class] delegate];
-        
-        // Tell the delegate about it.  It would be weird if the delegate didn't support this
-        // selector (it did return YES from -interceptingHTTPProtocol:canAuthenticateAgainstProtectionSpace:
-        // after all), but if it doesn't then we just cancel the challenge ourselves (or the client
-        // thread, of course).
-        
-        if ( ! [strongDelegate respondsToSelector:@selector(interceptingHTTPProtocol:canAuthenticateAgainstProtectionSpace:)] ) {
-            [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge %@ cancelled; no delegate method", [[challenge protectionSpace] authenticationMethod]];
-            assert(NO);
-            [self clientThreadCancelAuthenticationChallenge:challenge completionHandler:completionHandler];
-        } else {
-            
-            // Remember that this challenge is in progress.
-            
-            self.pendingChallenge = challenge;
-            self.pendingChallengeCompletionHandler = completionHandler;
-            
-            // Pass the challenge to the delegate.
-            
-            [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge %@ passed to delegate", [[challenge protectionSpace] authenticationMethod]];
-            [strongDelegate interceptingHTTPProtocol:self didReceiveAuthenticationChallenge:self.pendingChallenge];
-        }
-    }
-}
-
-/*! Cancels an authentication challenge that hasn't made it to the pending challenge state.
- *  \details This routine is called as part of various error cases in the challenge handling
- *  code.  It cancels a challenge that, for some reason, we've failed to pass to our delegate.
- *
- *  The routine is always called on the main thread but bounces over to the client thread to
- *  do the actual cancellation.
- *  \param challenge The authentication challenge to cancel; must not be nil.
- *  \param completionHandler The associated completion handler; must not be nil.
- */
-
-- (void)clientThreadCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(ChallengeCompletionHandler)completionHandler
-{
-#pragma unused(challenge)
-    assert(challenge != nil);
-    assert(completionHandler != nil);
-    assert([NSThread isMainThread]);
-    
-    [self performOnThread:self.clientThread modes:self.modes block:^{
-        completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
-    }];
-}
-
-/*! Cancels an authentication challenge that /has/ made to the pending challenge state.
- *  \details This routine is called by -stopLoading to cancel any challenge that might be
- *  pending when the load is cancelled.  It's always called on the client thread but
- *  immediately bounces over to the main thread (because .pendingChallenge is a main
- *  thread only value).
- */
-
-- (void)cancelPendingChallenge
-{
-    assert([NSThread currentThread] == self.clientThread);
-    
-    // Just pass the work off to the main thread.  We do this so that all accesses
-    // to pendingChallenge are done from the main thread, which avoids the need for
-    // extra synchronisation.
-    
-    [self performOnThread:nil modes:nil block:^{
-        if (self.pendingChallenge == nil) {
-            // This is not only not unusual, it's actually very typical.  It happens every time you shut down
-            // the connection.  Ideally I'd like to not even call -mainThreadCancelPendingChallenge when
-            // there's no challenge outstanding, but the synchronisation issues are tricky.  Rather than solve
-            // those, I'm just not going to log in this case.
-            //
-            // [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge not cancelled; no challenge pending"];
-        } else {
-            id<JIHPInterceptingHTTPProtocolDelegate>  strongeDelegate;
-            NSURLAuthenticationChallenge *  challenge;
-            
-            strongeDelegate = [[self class] delegate];
-            
-            challenge = self.pendingChallenge;
-            self.pendingChallenge = nil;
-            self.pendingChallengeCompletionHandler = nil;
-            
-            if ([strongeDelegate respondsToSelector:@selector(interceptingHTTPProtocol:didCancelAuthenticationChallenge:)]) {
-                [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge %@ cancellation passed to delegate", [[challenge protectionSpace] authenticationMethod]];
-                [strongeDelegate interceptingHTTPProtocol:self didCancelAuthenticationChallenge:challenge];
-            } else {
-                [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge %@ cancellation failed; no delegate method", [[challenge protectionSpace] authenticationMethod]];
-                // If we managed to send a challenge to the client but can't cancel it, that's bad.
-                // There's nothing we can do at this point except log the problem.
-                assert(NO);
-            }
-        }
-    }];
-}
-
-- (void)resolveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge withCredential:(NSURLCredential *)credential
-{
-    assert(challenge == self.pendingChallenge);
-    // credential may be nil
-    assert([NSThread isMainThread]);
-    assert(self.clientThread != nil);
-    
-    if (challenge != self.pendingChallenge) {
-        [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge resolution mismatch (%@ / %@)", challenge, self.pendingChallenge];
-        // This should never happen, and we want to know if it does, at least in the debug build.
-        assert(NO);
-    } else {
-        ChallengeCompletionHandler  completionHandler;
-        
-        // We clear out our record of the pending challenge and then pass the real work
-        // over to the client thread (which ensures that the challenge is resolved on
-        // the same thread we received it on).
-        
-        completionHandler = self.pendingChallengeCompletionHandler;
-        self.pendingChallenge = nil;
-        self.pendingChallengeCompletionHandler = nil;
-        
-        [self performOnThread:self.clientThread modes:self.modes block:^{
-            if (credential == nil) {
-                [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge %@ resolved without credential", [[challenge protectionSpace] authenticationMethod]];
-                completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
-            } else {
-                [[self class] interceptingHTTPProtocol:self logWithFormat:@"challenge %@ resolved with <%@ %p>", [[challenge protectionSpace] authenticationMethod], [credential class], credential];
-                completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
-            }
-        }];
-    }
 }
 
 #pragma mark * NSURLSession delegate callbacks
@@ -621,42 +445,6 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
     [self.task cancel];
     
     [[self client] URLProtocol:self didFailWithError:[NSError errorWithDomain:NSCocoaErrorDomain code:NSUserCancelledError userInfo:nil]];
-}
-
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler
-{
-    BOOL        result;
-    id<JIHPInterceptingHTTPProtocolDelegate> strongeDelegate;
-    
-#pragma unused(session)
-#pragma unused(task)
-    assert(task == self.task);
-    assert(challenge != nil);
-    assert(completionHandler != nil);
-    assert([NSThread currentThread] == self.clientThread);
-    
-    // Ask our delegate whether it wants this challenge.  We do this from this thread, not the main thread,
-    // to avoid the overload of bouncing to the main thread for challenges that aren't going to be customised
-    // anyway.
-    
-    strongeDelegate = [[self class] delegate];
-    
-    result = NO;
-    if ([strongeDelegate respondsToSelector:@selector(interceptingHTTPProtocol:canAuthenticateAgainstProtectionSpace:)]) {
-        result = [strongeDelegate interceptingHTTPProtocol:self canAuthenticateAgainstProtectionSpace:[challenge protectionSpace]];
-    }
-    
-    // If the client wants the challenge, kick off that process.  If not, resolve it by doing the default thing.
-    
-    if (result) {
-        [[self class] interceptingHTTPProtocol:self logWithFormat:@"can authenticate %@", [[challenge protectionSpace] authenticationMethod]];
-        
-        [self didReceiveAuthenticationChallenge:challenge completionHandler:completionHandler];
-    } else {
-        [[self class] interceptingHTTPProtocol:self logWithFormat:@"cannot authenticate %@", [[challenge protectionSpace] authenticationMethod]];
-        
-        completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
-    }
 }
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
@@ -750,8 +538,12 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
         [[self client] URLProtocol:self didFailWithError:error];
     }
     
-    // We don't need to clean up the connection here; the system will call, or has already called, 
+    // We don't need to clean up the connection here; the system will call, or has already called,
     // -stopLoading to do that.
 }
+
+@end
+
+@implementation JIHPWeakDelegateHolder
 
 @end

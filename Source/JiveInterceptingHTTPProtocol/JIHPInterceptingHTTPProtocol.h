@@ -67,108 +67,104 @@
 
 + (void)start;
 
+/*! Call this to stop the module.  After this no HTTP and HTTPS requests will
+ *  go through this module.
+ */
++ (void)stop;
+
 /*! Sets the delegate for the class.
  *  \details Note that there's one delegate for the entire class, not one per
- *  instance of the class as is more normal.  The delegate is not retained in general,
+ *  instance of the class as is more normal.  The delegate is weakly referenced in general,
  *  but is retained for the duration of any given call.  Once you set the delegate to nil
  *  you can be assured that it won't be called unretained (that is, by the time that
  *  -setDelegate: returns, we've already done all possible retains on the delegate).
  *  \param newValue The new delegate to use; may be nil.
  */
 
-+ (void)setDelegate:(id<JIHPInterceptingHTTPProtocolDelegate>)newValue;
++ (void)setDelegate:(nullable id<JIHPInterceptingHTTPProtocolDelegate>)newValue;
 
 /*! Returns the class delegate.
  */
 
-+ (id<JIHPInterceptingHTTPProtocolDelegate>)delegate;
-
-@property (atomic, strong, readonly ) NSURLAuthenticationChallenge *    pendingChallenge;   ///< The current authentication challenge; it's only safe to access this from the main thread.
-
-/*! Call this method to resolve an authentication challeng.  This must be called on the main thread.
- *  \param challenge The challenge to resolve. This must match the pendingChallenge property.
- *  \param credential The credential to use, or nil to continue without a credential.
- */
-
-- (void)resolveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge withCredential:(NSURLCredential *)credential;
++ (nullable id<JIHPInterceptingHTTPProtocolDelegate>)delegate;
 
 @end
 
 /*! The delegate for the JIHPInterceptingHTTPProtocol class (not its instances).
  *  \details The delegate handles two different types of callbacks:
  *
- *  - authentication challenges
+ *  - interception
  *
  *  - logging
- *
- *  The latter is very simple.  The former is quite tricky.  The basic idea is that each JIHPInterceptingHTTPProtocol
- *  instance sends the delegate a serialised stream of authentication challenges, each of which it is
- *  expected to resolve.  The sequence is as follows:
- *
- *  -# It calls -interceptingHTTPProtocol:canAuthenticateAgainstProtectionSpace: to determine if the delegate
- *     can handle the challenge.  This can be call on an arbitrary background thread.
- *
- *  -# If the delegate returns YES, it calls -interceptingHTTPProtocol:didReceiveAuthenticationChallenge: to
- *     actually process the challenge.  This is always called on the main thread.  The delegate can resolve
- *     the challenge synchronously (that is, before returning from the call) or it can return from the call
- *     and then, later on, resolve the challenge.  Resolving the challenge involves calling
- *     -[JIHPInterceptingHTTPProtocol resolveAuthenticationChallenge:withCredential:], which also must be called
- *     on the main thread.  Between the calls to -interceptingHTTPProtocol:didReceiveAuthenticationChallenge:
- *     and -[JIHPInterceptingHTTPProtocol resolveAuthenticationChallenge:withCredential:], the protocol's
- *     pendingChallenge property will contain the challenge.
- *
- *  -# While there is a pending challenge, the protocol may call -interceptingHTTPProtocol:didCancelAuthenticationChallenge:
- *     to cancel the challenge.  This is always called on the main thread.
- *
- *  Note that this design follows the original NSURLConnection model, not the newer NSURLConnection model
- *  (introduced in OS X 10.7 / iOS 5) or the NSURLSession model, because of my concerns about performance.
- *  Specifically, -interceptingHTTPProtocol:canAuthenticateAgainstProtectionSpace: can be called on any thread
- *  but -interceptingHTTPProtocol:didReceiveAuthenticationChallenge: is called on the main thread.  If I unified
- *  them I'd end up calling the resulting single routine on the main thread, which meanings a lot more
- *  bouncing between threads, much of which would be pointless in the common case where you don't want to
- *  customise the default behaviour.  Alternatively I could call the unified routine on an arbitrary thread,
- *  but that would make it harder for clients and require a major rework of my implementation.
  */
 
 @protocol JIHPInterceptingHTTPProtocolDelegate <NSObject>
 
+#pragma mark - intercept
+
+/*! Called by the JIHPInterceptingHTTPProtocol class to test interception of a whole NSURLRequest.
+ *  This is only called if the NSURLRequest's URL is nonnull.
+ *  JIHPInterceptingHTTPProtocol applies a recursive property to intercepted requests so that
+ *  clients don't need guard against recursive interception.
+ *  Can be called on any thread.
+ *  \param interceptingHTTPProtocol The protocol instance itself
+ *  \param originalRequest The original NSURLRequest that 
+ *  \returns true if the request can be intercepted. false otherwise.
+ */
+
+- (nonnull NSMutableURLRequest *)interceptingHTTPProtocol:(nullable JIHPInterceptingHTTPProtocol *)interceptingHTTPProtocol interceptRequest:(nonnull NSURLRequest *)originalRequest;
+
 @optional
 
-/*! Called by an JIHPInterceptingHTTPProtocol instance to ask the delegate whether it's prepared to handle
- *  a particular authentication challenge.  Can be called on any thread.
- *  \param protocol The protocol instance itself; will not be nil.
- *  \param protectionSpace The protection space for the authentication challenge; will not be nil.
- *  \returns Return YES if you want the -interceptingHTTPProtocol:didReceiveAuthenticationChallenge: delegate
- *  callback, or NO for the challenge to be handled in the default way.
+#pragma mark - canIntercept
+
+/*! Called by the JIHPInterceptingHTTPProtocol class to test interception of a whole NSURLRequest.
+ *  This is only called if the NSURLRequest's URL is nonnull and its scheme is http or https.
+ *  JIHPInterceptingHTTPProtocol applies a recursive property to intercepted requests so that
+ *  clients don't need guard against recursive interception.
+ *  Can be called on any thread.
+ *  \param request the NSURLRequest that could be intercepted
+ *  \returns true if the request can be intercepted. false otherwise.
  */
 
-- (BOOL)interceptingHTTPProtocol:(JIHPInterceptingHTTPProtocol *)protocol canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace;
+- (BOOL)canInterceptRequest:(nonnull NSURLRequest *)request;
 
-/*! Called by an JIHPInterceptingHTTPProtocol instance to request that the delegate process on authentication
- *  challenge. Will be called on the main thread. Unless the challenge is cancelled (see below)
- *  the delegate must eventually resolve it by calling -resolveAuthenticationChallenge:withCredential:.
- *  \param protocol The protocol instance itself; will not be nil.
- *  \param challenge The authentication challenge; will not be nil.
+/*! Called by the JIHPInterceptingHTTPProtocol class to test interception of a given NSURL.
+ *  This is only called if -canInterceptRequest: is not implemented,
+ *  the NSURLRequest's URL is nonnull, and the NSURLRequest's URL scheme is http or https.
+ *  JIHPInterceptingHTTPProtocol applies a recursive property to intercepted requests so that
+ *  clients don't need guard against recursive interception.
+ *  Can be called on any thread.
+ *  \param request the NSURL of the NSURLRequest that could be intercepted
+ *  \returns true if the request can be intercepted. false otherwise.
  */
+- (BOOL)canInterceptURL:(nonnull NSURL *)URL;
 
-- (void)interceptingHTTPProtocol:(JIHPInterceptingHTTPProtocol *)protocol didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
-
-/*! Called by an JIHPInterceptingHTTPProtocol instance to cancel an issued authentication challenge.
- *  Will be called on the main thread.
- *  \param protocol The protocol instance itself; will not be nil.
- *  \param challenge The authentication challenge; will not be nil; will match the challenge
- *  previously issued by -interceptingHTTPProtocol:canAuthenticateAgainstProtectionSpace:.
- */
-
-- (void)interceptingHTTPProtocol:(JIHPInterceptingHTTPProtocol *)protocol didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
+#pragma mark - log
 
 /*! Called by the JIHPInterceptingHTTPProtocol to log various bits of information.
  *  Can be called on any thread.
- *  \param protocol The protocol instance itself; nil to indicate log messages from the class itself.
+ *  \param interceptingHTTPProtocol The protocol instance itself; nil to indicate log messages from the class itself.
  *  \param format A standard NSString-style format string; will not be nil.
  *  \param arguments Arguments for that format string.
  */
 
-- (void)interceptingHTTPProtocol:(JIHPInterceptingHTTPProtocol *)protocol logWithFormat:(NSString *)format arguments:(va_list)arguments;
+- (void)interceptingHTTPProtocol:(nullable JIHPInterceptingHTTPProtocol *)interceptingHTTPProtocol logWithFormat:(nonnull NSString *)format
+// clang's static analyzer doesn't know that a va_list can't have an nullability annotation.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnullability-completeness"
+                       arguments:(va_list)arguments;
+#pragma clang diagnostic pop
+
+/*! Called by the JAHPAuthenticatingHTTPProtocol to log various bits of information. Use this if implementing in Swift. Swift doesn't like
+ * -authenticatingHTTPProtocol:logWithFormat:arguments: because
+ * `Method cannot be marked @objc because the type of the parameter 3 cannot be represented in Objective-C`
+ *  I assume this is a problem with Swift not understanding that CVAListPointer should become va_list.
+ *  Can be called on any thread.
+ *  \param interceptingHTTPProtocol The protocol instance itself; nil to indicate log messages from the class itself.
+ *  \param message A message to log
+ */
+
+- (void)interceptingHTTPProtocol:(nullable JIHPInterceptingHTTPProtocol *)interceptingHTTPProtocol logMessage:(nonnull NSString *)message;
 
 @end
