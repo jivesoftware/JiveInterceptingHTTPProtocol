@@ -112,7 +112,7 @@
  *  \returns true if the request can be intercepted. false otherwise.
  */
 
-- (nonnull NSMutableURLRequest *)interceptingHTTPProtocol:(nullable JIHPInterceptingHTTPProtocol *)interceptingHTTPProtocol interceptRequest:(nonnull NSURLRequest *)originalRequest;
+- (nonnull NSMutableURLRequest *)interceptingHTTPProtocol:(nonnull JIHPInterceptingHTTPProtocol *)interceptingHTTPProtocol interceptRequest:(nonnull NSURLRequest *)originalRequest;
 
 @optional
 

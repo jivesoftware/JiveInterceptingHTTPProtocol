@@ -28,7 +28,7 @@
 
 #pragma mark - JIHPInterceptingHTTPProtocolDelegate
 
-- (nonnull NSMutableURLRequest *)interceptingHTTPProtocol:(nullable JIHPInterceptingHTTPProtocol *)interceptingHTTPProtocol interceptRequest:(nonnull NSURLRequest *)originalRequest {
+- (nonnull NSMutableURLRequest *)interceptingHTTPProtocol:(nonnull JIHPInterceptingHTTPProtocol *)interceptingHTTPProtocol interceptRequest:(nonnull NSURLRequest *)originalRequest {
     NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://i1.kym-cdn.com/photos/images/newsfeed/000/096/044/trollface.jpg"]];
     return mutableRequest;
 }
