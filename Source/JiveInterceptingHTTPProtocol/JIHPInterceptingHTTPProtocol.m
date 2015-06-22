@@ -406,6 +406,14 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task willPerformHTTPRedirection:(NSHTTPURLResponse *)response newRequest:(NSURLRequest *)newRequest completionHandler:(void (^)(NSURLRequest *))completionHandler
 {
+    // rdar://21484589
+    // this is called from JAHPQNSURLSessionDemuxTaskInfo,
+    // which is called from the NSURLSession delegateQueue,
+    // which is a different thread than self.clientThread.
+    // It is possible that -stopLoading was called on self.clientThread
+    // just before this method if so, ignore this callback
+    if (!self.task) { return; }
+    
     NSMutableURLRequest *    redirectRequest;
     
 #pragma unused(session)
@@ -449,6 +457,14 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
 {
+    // rdar://21484589
+    // this is called from JAHPQNSURLSessionDemuxTaskInfo,
+    // which is called from the NSURLSession delegateQueue,
+    // which is a different thread than self.clientThread.
+    // It is possible that -stopLoading was called on self.clientThread
+    // just before this method if so, ignore this callback
+    if (!self.task) { return; }
+    
     NSURLCacheStoragePolicy cacheStoragePolicy;
     NSInteger               statusCode;
     
@@ -481,6 +497,14 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
+    // rdar://21484589
+    // this is called from JAHPQNSURLSessionDemuxTaskInfo,
+    // which is called from the NSURLSession delegateQueue,
+    // which is a different thread than self.clientThread.
+    // It is possible that -stopLoading was called on self.clientThread
+    // just before this method if so, ignore this callback
+    if (!self.task) { return; }
+    
 #pragma unused(session)
 #pragma unused(dataTask)
     assert(dataTask == self.task);
@@ -496,6 +520,14 @@ static NSString * kOurRecursiveRequestFlagProperty = @"com.apple.dts.JIHPInterce
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask willCacheResponse:(NSCachedURLResponse *)proposedResponse completionHandler:(void (^)(NSCachedURLResponse *))completionHandler
 {
+    // rdar://21484589
+    // this is called from JAHPQNSURLSessionDemuxTaskInfo,
+    // which is called from the NSURLSession delegateQueue,
+    // which is a different thread than self.clientThread.
+    // It is possible that -stopLoading was called on self.clientThread
+    // just before this method if so, ignore this callback
+    if (!self.task) { return; }
+    
 #pragma unused(session)
 #pragma unused(dataTask)
     assert(dataTask == self.task);

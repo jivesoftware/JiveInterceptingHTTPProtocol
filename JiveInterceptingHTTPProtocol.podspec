@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'JiveInterceptingHTTPProtocol'
-  s.version = '0.1.1'
+  s.version = '0.1.2'
   s.license = { :type => 'BSD', :file => 'LICENSE' }
   s.summary = 'JiveInterceptingHTTPProtocol is an easy way to intercept NSURLRequests'
   s.homepage = 'https://github.com/jivesoftware/JiveInterceptingHTTPProtocol'
